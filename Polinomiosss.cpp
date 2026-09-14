@@ -190,13 +190,15 @@ int main (){
     Termino* nodo = nullptr;
     Termino* nodo2 = nullptr;
     float coeficiente=0;
-    int exponente=0;
-    nodo = insertarTermino (nodo, 4.0f,3);
+   int exponente=0;
+     /* nodo = insertarTermino (nodo, 4.0f,3);
     nodo = insertarTermino (nodo, -2.0f,1);
     nodo = insertarTermino (nodo, 5.0f,0);
     nodo = insertarTermino (nodo, -1.0f,2);
     cout << "Polinomio (x)";
-    imprimirPolinomio(nodo);
+    imprimirPolinomio(nodo); 
+    */
+
     cout << "Grado: " << gradoPolinomio(nodo) <<endl;
     cout << "Nodos: " << contarTerminos(nodo) <<endl;
     for (int i = 0; i < 4; i++)
@@ -208,4 +210,9 @@ int main (){
         nodo2=insertarTermino(nodo2,coeficiente,exponente);
     }
     imprimirPolinomio(nodo2);    
+    cout << "Liberar memoria" <<endl;
+    int liberar = 0;
+    liberar = destruirPolinomio(nodo);
+    Liberar = destruirPolinomio(nodo2);
+    cout << "Se libero el nodo 1 y nodo 2";
 }
